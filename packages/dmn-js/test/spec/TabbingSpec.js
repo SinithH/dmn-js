@@ -96,7 +96,7 @@ var diagramXML = require('./diagram.dmn');
 
 describe('tabs', function() {
 
-  it('should show tabs', function() {
+  it.only('should show tabs', function() {
 
     var $parent = domify(`
       <div class="test-container">
