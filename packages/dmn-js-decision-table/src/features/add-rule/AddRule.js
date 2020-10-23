@@ -6,11 +6,13 @@ export default class AddRule {
 
     eventBus.on('addRule', (e, context) => {
       const rule = editorActions.trigger('addRule');
-      const colIndex = context.colIndex || 0;
-      if (rule.cells[colIndex])
+      const colIndex = context.colIndex;
+
+      if (rule.cells[colIndex]) {
         selection.select(rule.cells[colIndex]);
-      else
+      } else {
         selection.select(rule.cells[0]);
+      }
     });
   }
 }
